@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Digital Qur'an</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="theme-color" content="#008fc4">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/png" sizes="144x144" href="./icons/icon-144x144.png"/>
+    <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192x192.png"/>
+    <link rel="icon" type="image/png" sizes="512x512" href="./icons/icon-512x512.png"/>
+    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="./icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="./icons/icon-512x512.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/detail.css" />    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script type="module" src="./js/pages/detail.js"></script>
+</head>
+<body>
+    <div style="display: none;" class="container">
+        <div class="errorAnimation">
+            <lottie-player src="./json/14651-error-animation.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+            <div class="text">Error Occurred</div>
+        </div>
+        <div class="notFoundAnimation">
+            <lottie-player src="./json/84163-page-not-found.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+            <div class="text">Not Found</div>
+        </div>
+        <div class="loadingAnimation">
+            <lottie-player src="./json/59265-muslim-reads-the-koran-in-the-month-of-ramadan.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+            <div class="text">Loading ...</div>
+        </div>
+        <div id="mainApp">
+            <div id="navbar">
+                <div class="surahName"></div>
+                <button class="backButton">
+                    <span class="material-icons">arrow_back</span>
+                </button>
+            </div>
+            <div class="container">
+                <div id="content">
+                    <div id="ayahContainer"></div>
+                </div>
+            </div>
+            <div id="audioPanel">
+                <div class="audioPlayer">
+                    <audio controls></audio>
+                    <button class="playPauseButton">
+                        <span class="material-icons">play_arrow</span>
+                    </button>
+                    <div class="audioTime">
+                        <span class="currentTime">00:00</span> / <span class="duration">00:00</span>
+                    </div>
+                    <input class="slider" type="range"/>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

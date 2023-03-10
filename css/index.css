@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.container {
+    max-width: 1024px;
+    padding: 2.5rem 0;
+    margin: auto;
+}
+
+.container .greeting {
+    margin-left: 0.25rem;
+    font-size: 1.25rem;
+    font-family: "Nunito", sans-serif;
+    margin-bottom: 0.25rem;
+    color: #888888;
+    font-weight: 600;
+}
+
+.container .bismillah {
+    margin-left: 0.25rem;
+    text-align: left;
+    font-style: italic;
+    font-size: 1.25rem;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 1.5rem;
+    color: #888888;
+    font-weight: 600;
+}
+
+.container .banner {
+    position: relative;
+    background: linear-gradient(101.69deg, #42B7E2 23.29%, #008FC4 75.93%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1.2rem;
+    margin-top: 1.3rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0.8rem;
+    height: 10rem;
+    overflow: hidden;
+    box-shadow: 0px 5px 20px 8px rgba(0, 143, 196, 0.25);
+}
+
+.container .banner .appName div:first-child {
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    color: #ebebeb;
+}
+
+.container .banner .appName div:last-child {
+    font-size: 1.4rem;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container .banner .quranIcon {
+    position: absolute;
+    right: -3.5rem;
+    bottom: -3.5rem;
+    width: 16rem;
+    height: 16rem;
+    background-image: url('../images/quran.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+    .container .banner .quranIcon {
+        position: absolute;
+        right: -2rem;
+        bottom: -4rem;
+        width: 18rem;
+        height: 18rem;
+    }   
+}
+
+.loadingAnimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.loadingAnimation lottie-player {
+    width: 20rem;
+    height: 20rem;
+}
+
+.loadingAnimation .text {
+    margin-top: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    color: #5d5d5d;
+}
+
+.errorAnimation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.errorAnimation lottie-player {
+    width: 20rem;
+    height: 20rem;
+}
+
+.errorAnimation .text {
+    margin-top: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    color: #5d5d5d;
+}
+
+#mainApp {
+    display: none;
+    margin-top: 2.5rem;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: grid;    
+    padding: 0.8rem;
+    z-index: 99;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+#navbar .searchContainer {
+    display: flex;
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+}
+
+#navbar .searchContainer .searchInput {
+    display: flex;
+    justify-content: space-between;
+    background-color:#e7e7e7;
+    color: #696969;
+    width: calc(100% - 3rem);
+    height: 1.5rem;
+    border-radius: 0.8rem;
+    padding: 0.4rem 1.5rem;
+}
+
+#navbar .searchContainer .searchInput input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin-right: 0.5rem;
+}
+
+#content .surahItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #cbcbcb;
+    padding: 2.25rem 0.8rem;
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.language-select {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 0.5rem;
+}
+
+#content .surahItem:hover {
+    background-color: #f4fafe;
+}
+
+#content .surahItem .nameInfo {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#content .surahItem .nameInfo .number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.95rem;
+    clip-path: circle();
+    border-radius: 50%;
+    background-color: #008fc4;
+    color: white;
+}
+
+#content .surahItem .nameInfo .name {
+    font-weight: bold;
+    color: #008fc4;        
+}
+
+#content .surahItem .nameInfo .translation {
+    color: #5d5d5d;
+    font-size: 0.85rem;
+}
+
+#content .surahItem .additionalInfo {
+    text-align: right;
+    color: #5d5d5d;
+}
+
+.vectorAttribution {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.vectorAttribution a {
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    font-weight: 500;
+    color: #5d5d5d;
+}
+
+.vectorAttribution a:hover {
+    color: #008fc4;
+    text-decoration: underline;
+}
+
+.vectorAttribution a:focus {
+    color: #008fc4;
+    text-decoration: underline;
+}

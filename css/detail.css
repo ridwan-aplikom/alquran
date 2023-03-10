@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.loadingAnimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.loadingAnimation lottie-player {
+    width: 20rem;
+    height: 20rem;
+}
+
+.loadingAnimation .text {
+    margin-top: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    color: #5d5d5d;
+}
+
+.notFoundAnimation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.notFoundAnimation lottie-player {
+    width: 20rem;
+    height: 20rem;
+}
+
+.notFoundAnimation .text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    color: #5d5d5d;
+}
+
+.errorAnimation {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.errorAnimation lottie-player {
+    width: 20rem;
+    height: 20rem;
+}
+
+.errorAnimation .text {
+    margin-top: 2rem;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    color: #5d5d5d;
+}
+
+#mainApp {
+    display: none;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: grid;    
+    padding: 0.8rem;
+    z-index: 99;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+#navbar .surahName {
+    color: #008FC4;
+    text-align: center;
+    font-weight: bold;
+}
+
+#navbar .backButton {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 1.2rem;
+    top: 0.65rem;
+    background: transparent;
+    border: none;
+    clip-path: circle();
+    cursor: pointer;
+}
+
+#navbar .backButton:hover {
+    background: #cecece;
+}
+
+#content {
+    max-width: 1024px;
+    padding: 2.5rem 0;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+#content .ayahItem {
+    margin-bottom: 0.4rem;
+    padding: 1.25rem 0.8rem;
+    border-bottom: 1px solid #cbcbcb;
+    scroll-margin: 5rem;
+}
+
+#content .ayahItem.active {
+    background-color: #f4fafe;
+}
+
+#content .ayahItem .arabic {
+    text-align: right;
+    margin-bottom: 1.8rem;
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    line-height: 4.25rem;
+}
+
+#content .ayahItem .read {
+    margin-bottom: 0.8rem;
+}
+
+#ayahContainer .ayahItem .read {
+    color: #1b83e4;
+    font-family: 'Nunito', sans-serif;
+}
+
+#ayahContainer .ayahItem .translation {
+    color: #5d5d5d;;
+    font-family: 'Nunito', sans-serif;
+}
+
+#ayahContainer .ayahItem .topContainer {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Nunito', sans-serif;
+}
+
+#ayahContainer .ayahItem .topContainer .surahAndAyahInfo {
+    display: none;
+}
+
+#ayahContainer .ayahItem .topContainer button {
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    clip-path: circle();
+    background: #008fc4;
+    color: white;
+}
+
+#ayahContainer .ayahItem .topContainer button span {
+    font-size: 1.2rem;
+}
+
+#ayahContainer .ayahItem .topContainer .ayahNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    clip-path: circle();
+    font-size: 0.85rem;
+    border-radius: 50%;
+    border: 1px solid #008fc4;
+    color: #008fc4;
+}
+
+#audioPanel {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: white;
+    padding: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.audioPlayer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.audioPlayer audio {
+    display: none;
+    width: 100%;
+}
+
+.audioPlayer .playPauseButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #1b83e4;
+    color: white;
+    clip-path: circle();
+    border: none;
+    cursor: pointer;
+}
+
+.audioPlayer .playPauseButton:hover {
+    background-color: #499ce9;
+}
+
+.audioPlayer .playPauseButton:focus {
+    background-color: #499ce9;
+}
+
+.audioPlayer .audioTime {
+    color: #5d5d5d;;
+    flex-shrink: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.audioPlayer .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    background-color: #bebebe;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    outline: none;
+}
+
+.audioPlayer .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    cursor: pointer;
+    transform: translateY(-0.2rem);
+    width: 1rem;
+    height: 1rem;
+    clip-path: circle();
+    background: #1b83e4;
+}
+
+.audioPlayer .slider::-moz-range-thumb {
+    cursor: pointer;
+    width: 1rem;
+    height: 1rem;
+    clip-path: circle();
+    background: #1b83e4;
+}
+
+.audioPlayer .slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #bebebe;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+  
+.audioPlayer .slider:focus::-webkit-slider-runnable-track {
+    background: #a7a7a7;
+}
+
+.audioPlayer .slider::-moz-range-track {
+    width: 100%;
+    height: 0.5rem;
+    background-color: #bebebe;
+    border-radius: 0.8rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 640px) {
+    #content .ayahItem .arabic {
+        font-size: 2.1rem;
+        line-height: 5rem;
+    }
+}
